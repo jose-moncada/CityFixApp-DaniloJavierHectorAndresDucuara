@@ -31,4 +31,9 @@ describe('Pruebas de Red E2E Live Network - CityFix', () => {
     expect(primerReporte).toHaveProperty('votes');
   });
 
+  test('4. Ver datos obtenidos', async () => {
+    const reports = await getReports();
+    console.log(reports);
+    expect(reports.length).toBeGreaterThan(0);
+  });
 });
